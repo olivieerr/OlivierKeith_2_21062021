@@ -1,0 +1,25 @@
+/* css pour le projet 2 de la formation de
+ * developpeur web de OpenClassrooms
+ *
+ * Projet Reservia
+ *
+ * créé le 21/06/2021
+ * par olivier
+ *
+ */
+
+/*todo mettre en forme le debut du css*/
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('Raleway-VariableFont_wght.ttf');
+         url('Raleway-Italic-VariableFont_wght.ttf');
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+img{
+    width: 10%;
+}
