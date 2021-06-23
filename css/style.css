@@ -20,6 +20,17 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
 img{
     width: 10%;
 }
