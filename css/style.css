@@ -20,17 +20,57 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 
+/*couleurs de la maquette (A voir si je laisse comme ça) */
+.bleu {
+    color: #0065FC;
+}
+.clair{
+    color: #DEEBFF;
+}
+.gris {
+    color: #F2F2F2;
+}
+
 header {
     display: flex;
     justify-content: space-between;
 
 }
 
-nav {
+/*nav {
     display: flex;
     justify-content: space-between;
+}*/
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a:visited {
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
+}
+.bouton {
+    background-color: #0065FC;
+    color: white;
+}
+
+#hebergement {
+    display: flex;
+}
+#principale {
+    background-color: #F2F2F2;
+    border-radius: 20px;
+}
+#populaires {
+    background-color: #F2F2F2;
+    border-radius: 20px;
 }
 
 img{
     width: 10%;
+}
+
+footer {
+    background-color: #F2F2F2;
 }
