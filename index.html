@@ -10,29 +10,27 @@
 </head>
 <body>
     <header>
-        <img src="images/logo/Reservia.svg" alt="logo de la société Reservia" />
+        <div class="logo"><img src="images/logo/Reservia.svg" alt="logo de la société Reservia" /></div>
         <!-- todo ajouter les ancres -->
         <nav id="ancre">
-                <a href="#">Hébergements</a>
-                <a href="#">Activités</a>
-                <a href="#">S'inscrire</a>
+                <a href="#principale" class="active bleu">Hébergements</a>
+                <a href="#activite">Activités</a>
         </nav>
+        <div class="inscription"><a class="bleu" href="#">S'inscrire</a></div>
     </header>
     <section class="recherche">
         <!--todo ajouter le champ de recherche via form-->
 
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <p>En plein centre ville ou en pleine nature</p>
-        <form method="post" action="#">
+        <form class="formulaire" method="post" action="#">
             <i class="fas fa-map-marker-alt"></i>
             <input name="recherche" id="recherche" type="text" placeholder="Marseille, France">
             <input class="bouton" type="submit" value="Rechercher">
         </form>
-        <div id="filtres">
-
-        </div>
-            <ul>
-                <li><i class="fas fa-money-bill-wave"></i>Économique</li>
+            <ul class="ligne">
+                <li class="normal">Filtres</li>
+                <li class="filtre"><i class="fas fa-money-bill-wave bleu"></i>Économique</li>
                 <li><i class="fas fa-child"></i>Famillial</li>
                 <li><i class="fas fa-heart"></i>Romantique</li>
                 <li><i class="fas fa-dog">Animaux autorisés</i></li>
@@ -48,7 +46,9 @@
             <div class="etiquette">
                 <a href="#">
                 <img src="images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="photo de la chambre">
-                <p>Auberge de la Cannebière</p>
+                <h4>Auberge de la Cannebière</h4>
+                    <p>Nuit à partir de 25€</p>
+                    <i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star gris"></i>
                 </a>
             </div>
 
@@ -59,6 +59,7 @@
         </section>
     </div>
     <section id="activite">
+        <h1>Activités à Marseille</h1>
         <!-- todo ajouter les images-->
         <figure>
             <img src="images/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="photo du Vieux Port de Marseille">
