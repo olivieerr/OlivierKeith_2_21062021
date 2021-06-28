@@ -43,11 +43,6 @@ ul {
     padding: 0;
 }
 
-input {
-    border: none;
-}
-
-
 /*Règles du header*/
 header {
     margin: 0 20px 0 20px;
@@ -85,19 +80,39 @@ nav {
 
 /* paramètres de le section de recherche*/
 .recherche {
-    margin: 0 20px 0 20px;
+    margin: 0 30px 0 30px;
 }
 
 .formulaire {
-    border: 1px #F2F2F2 solid;
-    border-radius: 5px;
-    padding: 5px;
-
+    display: flex;
+    align-items: center;
 }
+
+.map {
+    background-color: #F2F2F2;
+    border: 1px #F2F2F2 solid;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+}
+
+#recherche {
+    border: 1px #F2F2F2 solid;
+    padding: 10px;
+    font-weight: bold;
+}
+
 .bouton {
     background-color: #0065FC;
     color: white;
-    padding: 5px;
+    padding: 10px;
+    border: 1px #0065FC solid;
+    border-radius: 0 10px 10px 0;
+}
+
+.i {
+    /*border: 1px #F2F2F2 solid;*/
+    border-radius: 10px;
+    color: white;
 }
 
 /*todo créer une règle pour le "li"*/
@@ -105,42 +120,67 @@ nav {
     display: flex;
     list-style-type: none;
     font-weight: bold;
+    margin: 20px 0 20px 0;
 }
 
 .normal {
-    padding: 5px 5px 5px 0;
+    padding: 10px 10px 10px 0;
+    margin-right: 5px;
 }
 
 .filtre {
-    padding: 5px;
+    padding-right: 10px;
     border: 1px #F2F2F2 solid;
     border-radius: 20px;
+    margin: 0 10px 0 10px;
 }
 
 .filtre i {
     border: 1px #DEEBFF solid;
     border-radius: 20px;
     background-color: #DEEBFF;
+    padding: 10px;
+    margin-right: 10px;
 }
 
 
 /*Règles pour la partie hébergement*/
 #hebergement {
-    margin: 0 20px 0 20px;
+    margin: 0 30px 0 30px;
     display: flex;
 }
 
 #principale {
     width: 60%;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    flex-wrap: wrap;
     background-color: #F2F2F2;
     border-radius: 20px;
 }
 
 .etiquette {
-    width: 30%;
+    width: 40%;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    margin: 20px;
+}
+.etiquette h4, p {
+    margin: 5px 10px 5px 10px;
+}
+
+.etiquette i:nth-child(4) {
+    margin: 0 0 10px 10px;
+}
+
+.etiquette img{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    margin: 5px 5px 0 5px
 }
 
 #populaires {
