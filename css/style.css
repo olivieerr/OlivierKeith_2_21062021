@@ -42,10 +42,17 @@ a {
 ul {
     padding: 0;
 }
+p {
+    margin: 5px 0 5px 0;
+}
+
+h3 {
+    margin: 18px 0 0 0;
+}
 
 /*Règles du header*/
 header {
-    margin: 0 20px 0 20px;
+    margin: 0 30px 0 30px;
     display: flex;
     align-items: center;
 
@@ -79,13 +86,14 @@ nav {
 }
 
 /* paramètres de le section de recherche*/
-.recherche {
-    margin: 0 30px 0 30px;
+.barre {
+    margin: 20px 30px 20px 30px;
 }
 
 .formulaire {
     display: flex;
     align-items: center;
+    margin: 20px 0 20px 0;
 }
 
 .map {
@@ -115,7 +123,6 @@ nav {
     color: white;
 }
 
-/*todo créer une règle pour le "li"*/
 .ligne {
     display: flex;
     list-style-type: none;
@@ -142,50 +149,87 @@ nav {
     padding: 10px;
     margin-right: 10px;
 }
-
+/*todo reste à faire le survol*/
 
 /*Règles pour la partie hébergement*/
-#hebergement {
+.hebergement {
     margin: 0 30px 0 30px;
     display: flex;
+    justify-content: space-between;
 }
 
 #principale {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    width: 70%;
     background-color: #F2F2F2;
     border-radius: 20px;
 }
 
+.hebergement h3 {
+    margin-left: 30px;
+}
+
+.afficherPlus {
+    margin: 0 0 30px 30px;
+    font-weight: bold;
+}
+
+.galerie{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 10px 0 10px;
+    /*todo a modifer pour les autres ponts d'arret. Ici valable sur les très grand écran*/
+    justify-content: space-between;
+
+
+}
+
 .etiquette {
-    width: 40%;
+    width: 28%;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
     margin: 20px;
+    padding: 5px;
 }
-.etiquette h4, p {
+.etiquette p, h4 {
     margin: 5px 10px 5px 10px;
 }
 
 .etiquette i:nth-child(4) {
-    margin: 0 0 10px 10px;
+    margin: 0 0 0 10px;
 }
 
 .etiquette img{
     width: 100%;
     border-radius: 20px 20px 0 0;
-    margin: 5px 5px 0 5px
 }
 
-#populaires {
+/*Règles concernant les logements "populaires"*/
+.populaires {
+    width: 28%;
     background-color: #F2F2F2;
     border-radius: 20px;
+}
+
+.pile {
+    margin: 20px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.large {
+    display: flex;
+    flex-direction: row;
+}
+.large img {
+    width: 100%;
+    border-radius: 20px 0 0 20px;
 }
 
 /*Règles pour la partie "activités"*/
