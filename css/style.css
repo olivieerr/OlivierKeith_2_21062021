@@ -169,7 +169,7 @@ nav {
 }
 
 .afficherPlus {
-    margin: 0 0 30px 30px;
+    margin: 20px 0 30px 30px;
     font-weight: bold;
 }
 
@@ -193,6 +193,15 @@ nav {
     margin: 20px;
     padding: 5px;
 }
+
+/*.crop {
+    width: 275px;
+    height: 130px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px 15px 0 0;
+}*/
+
 .etiquette p, h4 {
     margin: 5px 10px 5px 10px;
 }
@@ -201,9 +210,13 @@ nav {
     margin: 0 0 0 10px;
 }
 
-.etiquette img{
+.etiquette img {
     width: 100%;
-    border-radius: 20px 20px 0 0;
+    max-height: 130px;
+    min-height: 70px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px 15px 0 0;
 }
 
 /*Règles concernant les logements "populaires"*/
@@ -228,8 +241,8 @@ nav {
     flex-direction: row;
 }
 .large img {
-    width: 100%;
-    border-radius: 20px 0 0 20px;
+    width: 50%;
+    border-radius: 15px 0 0 15px;
 }
 
 /*Règles pour la partie "activités"*/
