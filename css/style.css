@@ -20,6 +20,7 @@
 html, body{
     padding: 0;
     margin: 0;
+    max-width: 1920px;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -54,12 +55,12 @@ h3 {
 header {
     margin: 0 30px 0 30px;
     display: flex;
-    align-items: center;
+    align-content: stretch;
 
 }
 
 .logo {
-    flex: 2;
+    flex-grow: 1;
     /*background-color: #F2F2F2;*/
 }
 
@@ -67,12 +68,17 @@ header {
     min-width: 100px;
 }
 
-nav {
+nav, .inscription {
     display: flex;
-    justify-content: space-around;
-    flex: 1;
+    align-content: stretch;
     /*background-color: #0065FC;*/
 
+}
+
+nav a, .inscription a {
+    display: flex;
+    align-items: center;
+    padding: 0 10px 0 10px;
 }
 
 .active {
@@ -81,8 +87,9 @@ nav {
 }
 
 .inscription {
+    display: flex;
+    align-content: stretch;
     font-weight: bold ;
-    margin: 20px;
 }
 
 /* paramètres de le section de recherche*/
@@ -135,6 +142,7 @@ nav {
     margin-right: 5px;
 }
 
+/*todo definir un nombre de pixel pour les icones et jouer avec le padding pour essayer de les centrer*/
 .filtre {
     padding-right: 10px;
     border: 1px #F2F2F2 solid;
@@ -158,6 +166,10 @@ nav {
     justify-content: space-between;
 }
 
+.etiquette, .large {
+    box-shadow: 2px 2px 20px 0 darkgray;
+}
+
 #principale {
     width: 70%;
     background-color: #F2F2F2;
@@ -166,6 +178,7 @@ nav {
 
 .hebergement h3 {
     margin-left: 30px;
+    margin-right: 30px;
 }
 
 .afficherPlus {
@@ -186,21 +199,13 @@ nav {
 .etiquette {
     width: 28%;
     background-color: white;
-    display: flex;
+    /*display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;*/
     border-radius: 20px;
     margin: 20px;
     padding: 5px;
 }
-
-/*.crop {
-    width: 275px;
-    height: 130px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 15px 15px 0 0;
-}*/
 
 .etiquette p, h4 {
     margin: 5px 10px 5px 10px;
@@ -226,22 +231,45 @@ nav {
     border-radius: 20px;
 }
 
+.populaires h3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.populaires p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .pile {
-    margin: 20px;
-    padding: 5px;
-    background-color: white;
-    border-radius: 20px;
+    margin: 30px;
+    height: 85%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .large {
-    display: flex;
-    flex-direction: row;
+    padding: 5px;
+    background-color: white;
+    border-radius: 20px;
 }
+
+.large  a {
+    display: flex;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .large img {
-    width: 50%;
+    width: 40%;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
     border-radius: 15px 0 0 15px;
 }
 
