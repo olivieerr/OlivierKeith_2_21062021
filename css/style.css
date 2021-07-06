@@ -42,7 +42,9 @@ a {
 
 ul {
     padding: 0;
+    list-style-type: none;
 }
+
 p {
     margin: 5px 0 5px 0;
 }
@@ -132,7 +134,7 @@ nav a, .inscription a {
 
 .ligne {
     display: flex;
-    list-style-type: none;
+    /*list-style-type: none;*/
     font-weight: bold;
     margin: 20px 0 20px 0;
 }
@@ -150,13 +152,23 @@ nav a, .inscription a {
     margin: 0 10px 0 10px;
 }
 
+.filtre a:hover {
+    background-color: #0065FC;
+}
+
+.centre {
+    padding: 10px 5px 10px 15px;
+}
+
 .filtre i {
+    width: 20px;
     border: 1px #DEEBFF solid;
     border-radius: 20px;
     background-color: #DEEBFF;
     padding: 10px;
     margin-right: 10px;
 }
+
 /*todo reste à faire le survol*/
 
 /*Règles pour la partie hébergement*/
@@ -278,13 +290,14 @@ nav a, .inscription a {
     margin: 30px;
 }
 
+/*todo placer le width en % pour rendre responsive*/
 .diaporama {
     display: flex;
     justify-content: space-between;
 }
 
 .diaporama img {
-    width: 320px;
+    width: 300px;
     /*width: 100%;*/
     object-fit: cover;
     object-position: center;
@@ -337,5 +350,21 @@ img{
 
 /*Règles du "footer"*/
 footer {
+    width: 100%;
+    margin: 30px 0 30px 0;
     background-color: #F2F2F2;
+    display: flex;
 }
+
+.pied {
+    width: 30%;
+    margin: 30px;
+}
+
+.pied p {
+    font-weight: bold;
+}
+ .pied li {
+     margin-top: 5px;
+ }
+
