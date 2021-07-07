@@ -11,26 +11,36 @@
 /*todo mettre en forme le debut du css*/
 
 /* Regles générales*/
+
 @font-face {
     font-family: 'Raleway';
     src: url('Raleway-VariableFont_wght.ttf');
-         url('Raleway-Italic-VariableFont_wght.ttf');
+url('Raleway-Italic-VariableFont_wght.ttf');
 }
 
-html, body{
+html, body {
     padding: 0;
     margin: 0;
-    max-width: 1920px;
     font-family: 'Raleway', sans-serif;
 }
 
+.main {
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /*couleurs de la maquette */
+
 .bleu {
     color: #0065FC;
 }
-.clair{
+
+.clair {
     color: #DEEBFF;
 }
+
 .gris {
     color: #F2F2F2;
 }
@@ -54,6 +64,7 @@ h3 {
 }
 
 /*Règles du header*/
+
 header {
     margin: 0 30px 0 30px;
     display: flex;
@@ -63,7 +74,6 @@ header {
 
 .logo {
     flex-grow: 1;
-    /*background-color: #F2F2F2;*/
 }
 
 .logo img {
@@ -73,8 +83,6 @@ header {
 nav, .inscription {
     display: flex;
     align-content: stretch;
-    /*background-color: #0065FC;*/
-
 }
 
 nav a, .inscription a {
@@ -91,10 +99,11 @@ nav a, .inscription a {
 .inscription {
     display: flex;
     align-content: stretch;
-    font-weight: bold ;
+    font-weight: bold;
 }
 
 /* paramètres de le section de recherche*/
+
 .barre {
     margin: 20px 30px 20px 30px;
 }
@@ -127,14 +136,12 @@ nav a, .inscription a {
 }
 
 .i {
-    /*border: 1px #F2F2F2 solid;*/
     border-radius: 10px;
     color: white;
 }
 
 .ligne {
     display: flex;
-    /*list-style-type: none;*/
     font-weight: bold;
     margin: 20px 0 20px 0;
 }
@@ -144,20 +151,14 @@ nav a, .inscription a {
     margin-right: 5px;
 }
 
-/*todo definir un nombre de pixel pour les icones et jouer avec le padding pour essayer de les centrer*/
 .filtre {
-    padding-right: 10px;
     border: 1px #F2F2F2 solid;
     border-radius: 20px;
-    margin: 0 10px 0 10px;
+    margin: 5px 10px 5px 10px;
 }
 
-.filtre a:hover {
-    background-color: #0065FC;
-}
-
-.centre {
-    padding: 10px 5px 10px 15px;
+.filtre a {
+    padding: 10px 15px 10px 0;
 }
 
 .filtre i {
@@ -169,9 +170,19 @@ nav a, .inscription a {
     margin-right: 10px;
 }
 
-/*todo reste à faire le survol*/
+.centre i {
+    padding: 10px 5px 10px 12px;
+}
+
+.filtre a:hover {
+    background-color: #DEEBFF;
+    transition: all 1s ease;
+    border: 1px blue solid;
+    border-radius: 20px;
+}
 
 /*Règles pour la partie hébergement*/
+
 .hebergement {
     margin: 0 30px 0 30px;
     display: flex;
@@ -198,22 +209,17 @@ nav a, .inscription a {
     font-weight: bold;
 }
 
-.galerie{
+.galerie {
     display: flex;
     flex-wrap: wrap;
     margin: 0 10px 0 10px;
     /*todo a modifer pour les autres ponts d'arret. Ici valable sur les très grand écran*/
     justify-content: space-between;
-
-
 }
 
 .etiquette {
     width: 28%;
     background-color: white;
-    /*display: flex;
-    flex-direction: column;
-    align-items: center;*/
     border-radius: 20px;
     margin: 20px;
     padding: 5px;
@@ -229,6 +235,7 @@ nav a, .inscription a {
 
 .etiquette img {
     width: 100%;
+    /*height: 100%; todo a voir si utie -> il semble que ça fonctionne pour mon probleme de l'image du panier*/
     max-height: 130px;
     min-height: 70px;
     object-fit: cover;
@@ -236,7 +243,12 @@ nav a, .inscription a {
     border-radius: 15px 15px 0 0;
 }
 
+.haute {
+    height: 100%;
+}
+
 /*Règles concernant les logements "populaires"*/
+
 .populaires {
     width: 28%;
     background-color: #F2F2F2;
@@ -267,7 +279,7 @@ nav a, .inscription a {
     border-radius: 20px;
 }
 
-.large  a {
+.large a {
     display: flex;
 }
 
@@ -280,25 +292,26 @@ nav a, .inscription a {
 .large img {
     width: 40%;
     height: 150px;
+    max-height: 200px; /*todo a voir ce que ça donne*/
     object-fit: cover;
     object-position: center;
     border-radius: 15px 0 0 15px;
 }
 
 /*Règles pour la partie "activités"*/
+
 #activite {
     margin: 30px;
 }
 
-/*todo placer le width en % pour rendre responsive*/
 .diaporama {
     display: flex;
     justify-content: space-between;
 }
 
 .diaporama img {
-    width: 300px;
-    /*width: 100%;*/
+    /*width: 300px;*/
+    width: 100%;
     object-fit: cover;
     object-position: center;
 }
@@ -316,7 +329,11 @@ nav a, .inscription a {
     width: 100%; /*100% si % sinon width -15px*/
 }
 
-.double{
+.grande, .double {
+    width: 23%;
+}
+
+.double {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -344,11 +361,12 @@ nav a, .inscription a {
 }
 
 /*todo à modifier (je laisse en attendant d'y arriver)*/
-img{
+img {
     width: 10%;
 }
 
 /*Règles du "footer"*/
+
 footer {
     width: 100%;
     margin: 30px 0 30px 0;
@@ -364,7 +382,65 @@ footer {
 .pied p {
     font-weight: bold;
 }
- .pied li {
-     margin-top: 5px;
- }
+
+.pied li {
+    margin-top: 5px;
+}
+
+/* Rappel sur les media queries :
+ Small devices (landscape phones, 576px and up)
+ @media (min-width: 576px) { ... }
+
+ Medium devices (tablets, 768px and up)
+ @media (min-width: 768px) { ... }
+
+ Large devices (desktops, 992px and up)
+ @media (min-width: 992px) { ... }
+
+ Extra large devices (large desktops, 1200px and up)
+ @media (min-width: 1200px) { ... }
+ */
+
+/* pour les tablettes et écranmoyen jusqu'a 1200px*/
+@media (max-width: 1427px) {
+
+
+    .etiquette{
+        width: 27%;
+    }
+
+    .pile {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 1216px) {
+    .etiquette {
+        width: 25%;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .etiquette {
+        width: 40%;
+    }
+
+
+    .large img {
+        height: 175px;
+    }
+}
+
+@media (max-width: 852px) {
+
+    .ligne {
+        flex-wrap: wrap;
+        justify-content: space-around; /*todo a modifier ?*/
+    }
+}
+
+/*todo passage à 1 image à 802px voir si passage à la maquette Iphone ou si je fais d'autre breakpoint*/
+/*todo voir aussi le comportement des images de la section populaire*/
+
 
