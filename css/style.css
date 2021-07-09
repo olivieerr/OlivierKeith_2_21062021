@@ -218,7 +218,7 @@ nav a, .inscription a {
 }
 
 .etiquette {
-    width: 28%;
+    width: 27%;
     background-color: white;
     border-radius: 20px;
     margin: 20px;
@@ -292,7 +292,7 @@ nav a, .inscription a {
 .large img {
     width: 40%;
     height: 150px;
-    max-height: 200px; /*todo a voir ce que ça donne*/
+    /*max-height: 200px; todo a voir ce que ça donne*/
     object-fit: cover;
     object-position: center;
     border-radius: 15px 0 0 15px;
@@ -402,7 +402,7 @@ footer {
  */
 
 /* pour les tablettes et écranmoyen jusqu'a 1200px*/
-@media (max-width: 1427px) {
+/*@media (max-width: 1427px) {
 
 
     .etiquette{
@@ -412,32 +412,84 @@ footer {
     .pile {
         justify-content: space-around;
     }
-}
+}*/
 
 @media (max-width: 1216px) {
     .etiquette {
         width: 25%;
     }
+
+    .pile {
+        justify-content: space-around;
+    }
+
+    .large img {
+        height: 158px;
+    }
+
+    .diaporama {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .grande, .double {
+        width: 33%;
+    }
+
+    .grande, .moyenne, .petite{
+        margin: 20px;
+    }
+
+    /*.diaporama p {
+        padding: 10px 0 1px 1px;
+    }*/
+
 }
 
 @media (max-width: 991px) {
 
-    .etiquette {
-        width: 40%;
+    .hebergement {
+        flex-direction: column;
     }
 
+    #principale{
+        width: 100%;
+        margin-top: 10px;
+        background-color: white;
+        order: 2;
+    }
+
+    .etiquette {
+        width: 25%;
+    }
+
+    .populaires {
+        width: 100%;
+        margin-bottom: 10px;
+        order: 1;
+    }
+    .pile {
+        flex-direction: row;
+        /*height: 100%;*/
+    }
+
+    .large {
+        width: 29%;
+    }
 
     .large img {
-        height: 175px;
+        height: 160px; /*todo differentes valeurs de test 175px 195px*/
     }
-}
-
-@media (max-width: 852px) {
 
     .ligne {
         flex-wrap: wrap;
         justify-content: space-around; /*todo a modifier ?*/
     }
+}
+
+@media (max-width: 768px) {
+
+
 }
 
 /*todo passage à 1 image à 802px voir si passage à la maquette Iphone ou si je fais d'autre breakpoint*/
