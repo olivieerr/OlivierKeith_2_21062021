@@ -26,9 +26,8 @@ html, body {
 
 .main {
     max-width: 1920px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    min-width: 280px;
+    margin: auto;
 }
 
 /*couleurs de la maquette */
@@ -82,13 +81,18 @@ header {
 
 nav, .inscription {
     display: flex;
-    align-content: stretch;
+    align-items: stretch;
 }
 
 nav a, .inscription a {
     display: flex;
     align-items: center;
     padding: 0 10px 0 10px;
+}
+
+nav a {
+    width: 50%;
+    text-align: center;
 }
 
 .active {
@@ -109,15 +113,28 @@ nav a, .inscription a {
 }
 
 .formulaire {
+    /*width: 90%;*/
     display: flex;
-    align-items: center;
+    align-items: stretch;
+    /*border: #DEEBFF 1px solid;
+    border-radius: 10px;
+    overflow: hidden;*/
     margin: 20px 0 20px 0;
 }
+
+/*.bordure {
+    display: flex;
+    align-items: stretch;
+    border: 1px #F2F2F2 solid;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+}*/
 
 .map {
     background-color: #F2F2F2;
     border: 1px #F2F2F2 solid;
-    padding: 10px;
+    padding: 12px;
     border-radius: 10px 0 0 10px;
 }
 
@@ -133,6 +150,10 @@ nav a, .inscription a {
     padding: 10px;
     border: 1px #0065FC solid;
     border-radius: 0 10px 10px 0;
+}
+
+.loupe {
+    display: none;
 }
 
 .i {
@@ -172,6 +193,10 @@ nav a, .inscription a {
 
 .centre i {
     padding: 10px 5px 10px 12px;
+}
+
+.centreCoeur i {
+    padding: 10px 7px 10px 11px;
 }
 
 .filtre a:hover {
@@ -277,6 +302,7 @@ nav a, .inscription a {
     padding: 5px;
     background-color: white;
     border-radius: 20px;
+    margin-bottom: 15px;
 }
 
 .large a {
@@ -322,11 +348,12 @@ nav a, .inscription a {
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: 15px 0 5px 15px;
+    padding: 15px 15px 15px 15px;
     z-index: 1;
     background-color: white;
-    height: 30px;
+    /*height: 30px;*/
     width: 100%; /*100% si % sinon width -15px*/
+    box-sizing: border-box;
 }
 
 .grande, .double {
@@ -433,12 +460,13 @@ footer {
     }
 
     .grande, .double {
-        width: 33%;
-    }
-
-    .grande, .moyenne, .petite{
+        width: 35%;
         margin: 20px;
     }
+
+    /*.grande, .moyenne, .petite {
+        margin: 20px;
+    }*/
 
     /*.diaporama p {
         padding: 10px 0 1px 1px;
@@ -488,9 +516,189 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .pile {
+        flex-direction: column;
+    }
 
+    .large {
+        width: 50%;
+        margin: 10px auto;
+    }
+
+    .large img {
+        width: 40%;
+        height: 130px;
+    }
+
+    .etiquette {
+        width: 35%;
+    }
+
+    .grande, .double {
+        width: 70%;
+    }
+
+    .grande img, .moyenne img, .petite img {
+        height: 300px;
+    }
+
+    .moyenne {
+        margin-bottom: 20px;
+    }
+    .petite {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 575px){
+
+    .main {
+        width: 100%;
+    }
+
+    header {
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    .logo {
+        padding-left: 10px;
+    }
+
+    #ancre {
+        width: 100%;
+        justify-content: space-around;
+        order: 3;
+    }
+
+    nav a {
+        display: inline-block;
+    }
+
+    .active {
+        border-top: none;
+        border-bottom: 1px #0065FC solid;
+        width: 50%;
+        padding-bottom: 10px;
+    }
+
+    .formulaire {
+        border: 1px #DEEBFF solid;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 20px auto;
+    }
+
+    .bouton {
+        display: none;
+    }
+
+    .map {
+        border: none;
+    }
+
+    #recherche {
+        flex: 1;
+        padding: 5px;
+        border: none;
+    }
+
+    .loupe {
+        display: inline-block;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        background-color: #0065FC;
+        padding: 12px;
+        font-weight: bold;
+
+    }
+    .ligne {
+        justify-content: space-between;
+    }
+
+    .normal {
+        width: 100%;
+    }
+
+    .filtre {
+        margin-left: 0;
+    }
+    .filtre a {
+        padding-right: 7px;
+    }
+
+    .hebergement {
+        margin: 0;
+    }
+
+    .populaires {
+        margin: 0;
+        border-radius: 0;
+        padding-bottom: 25px;
+    }
+
+    .populaires h3 {
+        padding-bottom: 18px;
+    }
+
+    .pile {
+        margin: 0;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .etiquette, .large, .grande, .moyenne, .petite {
+        box-shadow: 0 0 9px 0 darkgray;
+    }
+
+    .large, .etiquette, .grande, .double, .pied, #activite h1, .populaires h3, .afficherPlus, #principale h3, .barre {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .large img{
+        width: 30%;
+        height: 120px;
+    }
+
+    #principale h3 {
+        margin-bottom: 18px;
+    }
+
+    .galerie {
+        margin: 0;
+        /*flex-wrap: nowrap; todo utile ?*/
+        flex-direction: column;
+    }
+
+    .afficherPlus {
+        margin-top: 15px
+    }
+
+    #activite {
+        margin: 0;
+    }
+
+    .moyenne {
+        margin-bottom: 10px;
+    }
+
+    .petite {
+        margin-top: 10px;
+    }
+
+    .grande img, .moyenne img, .petite img {
+        height: 180px;
+    }
+
+
+    footer {
+        flex-direction: column;
+    }
 
 }
+
 
 /*todo passage à 1 image à 802px voir si passage à la maquette Iphone ou si je fais d'autre breakpoint*/
 /*todo voir aussi le comportement des images de la section populaire*/
