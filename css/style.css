@@ -14,8 +14,8 @@
 
 @font-face {
     font-family: 'Raleway';
-    src: url('Raleway-VariableFont_wght.ttf');
-url('Raleway-Italic-VariableFont_wght.ttf');
+    src: url('Raleway-VariableFont_wght.ttf'),
+    url('Raleway-Italic-VariableFont_wght.ttf');
 }
 
 html, body {
@@ -113,27 +113,13 @@ nav a {
 }
 
 .formulaire {
-    /*width: 90%;*/
     display: flex;
     align-items: stretch;
-    /*border: #DEEBFF 1px solid;
-    border-radius: 10px;
-    overflow: hidden;*/
     margin: 20px 0 20px 0;
 }
 
-/*.bordure {
-    display: flex;
-    align-items: stretch;
-    border: 1px #F2F2F2 solid;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: auto;
-}*/
-
 .map {
     background-color: #F2F2F2;
-    border: 1px #F2F2F2 solid;
     padding: 12px;
     border-radius: 10px 0 0 10px;
 }
@@ -148,7 +134,7 @@ nav a {
     background-color: #0065FC;
     color: white;
     padding: 10px;
-    border: 1px #0065FC solid;
+    border: 0 #F2F2F2 solid;
     border-radius: 0 10px 10px 0;
 }
 
@@ -184,7 +170,7 @@ nav a {
 
 .filtre i {
     width: 20px;
-    border: 1px #DEEBFF solid;
+    border: 1px #F2F2F2 solid;
     border-radius: 20px;
     background-color: #DEEBFF;
     padding: 10px;
@@ -238,7 +224,6 @@ nav a {
     display: flex;
     flex-wrap: wrap;
     margin: 0 10px 0 10px;
-    /*todo a modifer pour les autres ponts d'arret. Ici valable sur les très grand écran*/
     justify-content: space-between;
 }
 
@@ -260,9 +245,7 @@ nav a {
 
 .etiquette img {
     width: 100%;
-    /*height: 100%; todo a voir si utie -> il semble que ça fonctionne pour mon probleme de l'image du panier*/
-    max-height: 130px;
-    min-height: 70px;
+    height: 130px;
     object-fit: cover;
     object-position: center;
     border-radius: 15px 15px 0 0;
@@ -318,7 +301,6 @@ nav a {
 .large img {
     width: 40%;
     height: 150px;
-    /*max-height: 200px; todo a voir ce que ça donne*/
     object-fit: cover;
     object-position: center;
     border-radius: 15px 0 0 15px;
@@ -336,7 +318,6 @@ nav a {
 }
 
 .diaporama img {
-    /*width: 300px;*/
     width: 100%;
     object-fit: cover;
     object-position: center;
@@ -351,8 +332,7 @@ nav a {
     padding: 15px 15px 15px 15px;
     z-index: 1;
     background-color: white;
-    /*height: 30px;*/
-    width: 100%; /*100% si % sinon width -15px*/
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -367,14 +347,11 @@ nav a {
 }
 
 .grande, .moyenne, .petite {
-    /*width: 100%;*/
     position: relative;
     overflow: hidden;
     border-radius: 20px;
 }
 
-
-/*todo demander si pour faire propre je rogne les coin de p et img*/
 .grande img {
     height: 460px;
 }
@@ -385,11 +362,6 @@ nav a {
 
 .petite img {
     height: 150px;
-}
-
-/*todo à modifier (je laisse en attendant d'y arriver)*/
-img {
-    width: 10%;
 }
 
 /*Règles du "footer"*/
@@ -428,20 +400,8 @@ footer {
  @media (min-width: 1200px) { ... }
  */
 
-/* pour les tablettes et écranmoyen jusqu'a 1200px*/
-/*@media (max-width: 1427px) {
-
-
-    .etiquette{
-        width: 27%;
-    }
-
-    .pile {
-        justify-content: space-around;
-    }
-}*/
-
 @media (max-width: 1216px) {
+
     .etiquette {
         width: 25%;
     }
@@ -460,17 +420,9 @@ footer {
     }
 
     .grande, .double {
-        width: 35%;
-        margin: 20px;
+        width: 46%;
+        margin: 0 0 20px 0;
     }
-
-    /*.grande, .moyenne, .petite {
-        margin: 20px;
-    }*/
-
-    /*.diaporama p {
-        padding: 10px 0 1px 1px;
-    }*/
 
 }
 
@@ -498,7 +450,6 @@ footer {
     }
     .pile {
         flex-direction: row;
-        /*height: 100%;*/
     }
 
     .large {
@@ -506,36 +457,37 @@ footer {
     }
 
     .large img {
-        height: 160px; /*todo differentes valeurs de test 175px 195px*/
+        height: 160px;
     }
 
     .ligne {
         flex-wrap: wrap;
-        justify-content: space-around; /*todo a modifier ?*/
+        justify-content: space-around;
     }
 }
 
 @media (max-width: 768px) {
     .pile {
         flex-direction: column;
+        align-items: center;
     }
 
     .large {
-        width: 50%;
-        margin: 10px auto;
+        width: 100%;
     }
 
     .large img {
-        width: 40%;
-        height: 130px;
+        width: 45%;
+        height: 145px;
     }
 
     .etiquette {
-        width: 35%;
+        width: 46%;
+        margin: 0 0 20px 0;
     }
 
     .grande, .double {
-        width: 70%;
+        width: 100%;
     }
 
     .grande img, .moyenne img, .petite img {
@@ -613,6 +565,7 @@ footer {
         font-weight: bold;
 
     }
+
     .ligne {
         justify-content: space-between;
     }
@@ -624,6 +577,7 @@ footer {
     .filtre {
         margin-left: 0;
     }
+
     .filtre a {
         padding-right: 7px;
     }
@@ -645,7 +599,7 @@ footer {
     .pile {
         margin: 0;
         flex-direction: column;
-        align-content: center;
+        align-items: center;
     }
 
     .etiquette, .large, .grande, .moyenne, .petite {
@@ -654,11 +608,14 @@ footer {
 
     .large, .etiquette, .grande, .double, .pied, #activite h1, .populaires h3, .afficherPlus, #principale h3, .barre {
         width: 90%;
-        margin: 10px auto;
+    }
+
+    #activite h1, .populaires h3, .afficherPlus, #principale h3, .barre {
+        margin: 20px auto;
     }
 
     .large img{
-        width: 30%;
+        width: 35%;
         height: 120px;
     }
 
@@ -668,8 +625,8 @@ footer {
 
     .galerie {
         margin: 0;
-        /*flex-wrap: nowrap; todo utile ?*/
         flex-direction: column;
+        align-items: center;
     }
 
     .afficherPlus {
@@ -678,6 +635,11 @@ footer {
 
     #activite {
         margin: 0;
+    }
+
+    .diaporama {
+        align-items: center;
+        margin-top: 20px;
     }
 
     .moyenne {
@@ -694,13 +656,15 @@ footer {
 
 
     footer {
+        padding: 30px 0 30px 0;
         flex-direction: column;
+        align-items: center;
+    }
+
+    .pied {
+        margin: 0;
     }
 
 }
-
-
-/*todo passage à 1 image à 802px voir si passage à la maquette Iphone ou si je fais d'autre breakpoint*/
-/*todo voir aussi le comportement des images de la section populaire*/
 
 
