@@ -8,8 +8,6 @@
  *
  */
 
-/*todo mettre en forme le debut du css*/
-
 /* Regles générales*/
 
 @font-face {
@@ -71,6 +69,10 @@ header {
 
 }
 
+header a {
+    padding: 10px 20px 10px 20px;
+}
+
 .logo {
     flex-grow: 1;
 }
@@ -87,7 +89,6 @@ nav, .inscription {
 nav a, .inscription a {
     display: flex;
     align-items: center;
-    padding: 0 10px 0 10px;
 }
 
 nav a {
@@ -525,6 +526,7 @@ footer {
 
     nav a {
         display: inline-block;
+        border-bottom: 1px #F2F2F2 solid;
     }
 
     .active {
