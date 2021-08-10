@@ -57,7 +57,7 @@ p {
 }
 
 h3 {
-    margin: 18px 0 0 0;
+    margin: 18px 0 18px 0;
 }
 
 /*Règles du header*/
@@ -592,10 +592,6 @@ footer {
         margin: 0;
         border-radius: 0;
         padding-bottom: 25px;
-    }
-
-    .populaires h3 {
-        padding-bottom: 18px;
     }
 
     .pile {
